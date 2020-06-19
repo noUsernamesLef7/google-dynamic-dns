@@ -9,6 +9,9 @@ Google provides an API that you can use to change your Dynamic DNS record to mat
 
 The script tries to keep you from making bad requests. It checks the current public IP every time it's run and if it hasn't changed it exits. If and request returns an error or something unexpected, it will change the value stored in the "success" file from 0 to 1. Once that happens, it won't run again until you have manually corrected the problem and changed that value back to 0. Better safe than sorry in my view.
 
+## Dependencies
+curl
+
 ## Installation
 * Clone the repository to your preferred installation location. I suggest /opt but /usr/local or somewhere else is fine.
     git clone git@github.com:noUsernamesLef7/google-dynamic-dns.git
