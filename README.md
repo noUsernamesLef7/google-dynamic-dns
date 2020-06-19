@@ -14,12 +14,18 @@ The script tries to keep you from making bad requests. It checks the current pub
     git clone git@github.com:noUsernamesLef7/google-dynamic-dns.git
 * Edit the script and ensure that the **$DATA_PATH** variable matches the path to your install directory. While you have the file open, copy your hostname, username, and password from your Google Domains Dynamic DNS page. You can also edit the log file location if you wish.
 * Make the script executable
-    chmod +x /opt/google-dynamic-dns/google-dynamic-dns.sh
+```
+chmod +x /opt/google-dynamic-dns/google-dynamic-dns.sh
+```
 * Create your log file directory and file
-    mkdir /var/log/google-dynamic-dns
-    touch /var/log/google-dynamic-dns/log.txt
+```
+mkdir /var/log/google-dynamic-dns
+touch /var/log/google-dynamic-dns/log.txt
+```
 * Add a crontab entry to run with a certain frequency
-    crontab -e
+```
+crontab -e
+```
 And add an entry like `*/5 * * * * /opt/google-dynamic-dns/google-dynamic-dns.sh`
 
 That's it, now it will run every five minutes. [Here](https://crontab.guru) is a handy tool for creating cron schedule expressions if you want something different.
