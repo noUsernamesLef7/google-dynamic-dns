@@ -14,7 +14,9 @@ curl
 
 ## Installation
 * Clone the repository to your preferred installation location. I suggest /opt but /usr/local or somewhere else is fine.
+```
     git clone git@github.com:noUsernamesLef7/google-dynamic-dns.git
+```
 * Edit the script and ensure that the **$DATA_PATH** variable matches the path to your install directory. While you have the file open, copy your hostname, username, and password from your Google Domains Dynamic DNS page. You can also edit the log file location if you wish.
 * Make the script executable
 ```
