@@ -3,13 +3,13 @@
 # API documentation is at https://support.google.com/domains/answer/6147083?hl=en-GB
 
 # The hostname is your domain. The username and password can be found in the DNS tab under Dynamic DNS
-HOSTNAME="example.com"
+HOSTNAME="subdomain.example.com"
 USERNAME="username"
 PASSWORD="password"
 
 # Paths for storing data from previous runs and logs
-DATA_PATH="/opt/GoogleDynamicDNS"
-LOG_PATH="/var/log/GoogleDynamicDNS/log.txt"
+DATA_PATH="/opt/google-dynamic-dns"
+LOG_PATH="/var/log/google-dynamic-dns/log.txt"
 
 CURRENT_IP=$(curl -s https://domains.google.com/checkip)
 LAST_IP=$(cat ${DATA_PATH}/ip)
