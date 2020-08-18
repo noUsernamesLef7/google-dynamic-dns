@@ -9,6 +9,8 @@ Google provides an API that you can use to change your Dynamic DNS record to mat
 
 The script tries to keep you from making bad requests. It checks the current public IP every time it's run and if it hasn't changed it exits. If and request returns an error or something unexpected, it will change the value stored in the "success" file from 0 to 1. Once that happens, it won't run again until you have manually corrected the problem and changed that value back to 0. Better safe than sorry in my view.
 
+The only other thing to note is that if you call the script with the "--test" argument, the scripts functions will be loaded into the current shell session but not run. This could be useful for importing them into a different script using "source" but in this case it's mostly to allow the test.sh script to test functions to make sure they are behaving as expected. This kind of testing in Bash is pretty hacky and I was mostly just curious to see how/if it could be done.
+
 ## Dependencies
 curl
 
